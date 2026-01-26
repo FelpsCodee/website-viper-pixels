@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno", 
+    "local": "Gerador A",
+    "video": "/uploads/ascent/ataque/veneno_gerador.mp4"
+  },
+  {
+    "id": 2,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "parede",
+    "local": "Entrada B",
+    "video": "/uploads/ascent/ataque/parede_entrada_b.mp4"
+  }
+]

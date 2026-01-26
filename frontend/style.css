@@ -1,0 +1,101 @@
+body {
+    background-color: #0f1923;
+    color: #ece8e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #00ff88;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00ff88;
+    color: #0f1923;
+}
+
+#lista-pixels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+.card-pixel {
+    background: #1f2326;
+    border-bottom: 3px solid #00ff88;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+video {
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.grid-mapas {
+    display: grid;
+   
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-items: center; 
+}
+
+.card-mapa {
+    width: 100%;
+    max-width: 300px;
+    background-color: #1f2326;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column; 
+    position: relative; 
+}
+.card-mapa img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.card-mapa span {
+    background-color: #111;
+    color: #00ff88; 
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 1px solid #333;
+}
+
+.card-mapa:hover {
+    transform: translateY(-20px); 
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2); 
+}
