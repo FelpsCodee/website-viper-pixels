@@ -48,6 +48,7 @@ button:hover {
     border-bottom: 3px solid #00ff88;
     padding: 15px;
     border-radius: 4px;
+    font-family:  Andale Mono, monospace;
 }
 
 video {

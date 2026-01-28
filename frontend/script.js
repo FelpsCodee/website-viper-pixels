@@ -22,7 +22,6 @@ async function buscarPixels(categoria = '') {
 
 function filtrar(tipo){
     buscarPixels(tipo);
-
 }
 
 buscarPixels();
