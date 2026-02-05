@@ -1,6 +1,38 @@
-async function buscarPixels(categoria = '') {
+let mapaSelecionado = '';
+let ladoSelecionado = '';
+function filtrar(tipo){
+    buscarPixels(tipo);
+}
 
-    const response = await fetch(`/api/pixels?categoria=${categoria}`);
+function selecionarMapa(nome){
+    mapaSelecionado = nome;
+    
+    document.getElementById('tela-mapas').style.display = 'none';
+    document.getElementById('tela-lado').style.display = 'block';
+    
+
+}
+
+function selecionarLado(lado){
+    ladoSelecionado = lado;
+    
+    document.getElementById('tela-lado').style.display = 'none';
+    document.getElementById('filtro-pixels').style.display = 'block';
+    document.getElementById('titulo-mapa').innerHTML = `${mapaSelecionado} - ${ladoSelecionado}`;
+
+    buscarPixels(); 
+}
+
+function voltar(){
+    document.getElementById('filtro-pixels').style.display = 'none';
+    document.getElementById('tela-lado').style.display = 'block';
+
+    buscarPixels(console.log("Servidor respondeu com estes dados:", pixels));
+}
+;async function buscarPixels(categoria = '') {
+
+    const url =`/api/pixels?mapa=${mapaSelecionado}&lado=${ladoSelecionado}&categoria=${categoria}`;
+    const response = await fetch(url);
     const pixels = await response.json();
 
     const container = document.getElementById('lista-pixels');
@@ -19,26 +51,8 @@ async function buscarPixels(categoria = '') {
         container.appendChild(div);
     });
 }
-
-function filtrar(tipo){
-    buscarPixels(tipo);
-}
-
-buscarPixels();
-
-let MapaSelecionado = '';
-
-function selecionarMapa(nome){
-    mapaAtual = nome;
-
-    document.getElementById('tela-mapas').style.display = 'none';
-    document.getElementById('tela-pixels').style.display = 'block';
-    document.getElementById('titulo-mapa').innerHTML = nome;
-    buscarPixels();
-
-}
-
-function voltar(){
+function voltarParaMapas() {
+    document.getElementById('tela-lado').style.display = 'none';
     document.getElementById('tela-mapas').style.display = 'block';
-    document.getElementById('tela-pixels').style.display = 'none';
 }
+

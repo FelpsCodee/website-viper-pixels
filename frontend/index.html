@@ -12,49 +12,71 @@
     <div id="tela-mapas">
         <h1 style="text-align: center;">Escolha o mapa</h1>
         <div class="grid-mapas">
-            <div class="card-mapa" onclick="selecionarMapa('Abyss')">
-                <img src="assets_valorant_maps/abyss.jpg" alt="Abyss">
-                <span>ABYSS</span>
+            <div class="card-mapa" onclick="selecionarMapa('ABYSS')">
+                <img src="assets_valorant_maps/abyss.png" alt="Abyss">
+
             </div>
-            <div class="card-mapa" onclick="selecionarMapa('Bind')">
-                <img src="assets_valorant_maps/bind.jpg" alt="Bind">
-                <span>BIND</span>
+            <div class="card-mapa" onclick="selecionarMapa('ASCENT')">
+                <img src="assets_valorant_maps/ascent.png" alt="Ascent">
+
             </div>
-            <div class="card-mapa" onclick="selecionarMapa('Breeze')">
-                <img src="assets_valorant_maps/breeze.jpg" alt="Breeze">
-                <span>BREEZE</span>
+            <div class="card-mapa" onclick="selecionarMapa('BIND')">
+                <img src="assets_valorant_maps/bind.png" alt="Bind">
+
             </div>
-            <div class="card-mapa" onclick="selecionarMapa('Fracture')">
-                <img src="assets_valorant_maps/fracture.jpg" alt="Fracture">
-                <span>FRACTURE</span>
+            <div class="card-mapa" onclick="selecionarMapa('BREEZE')">
+                <img src="assets_valorant_maps/breeze.png" alt="Breeze">
+
+            </div>
+            <div class="card-mapa" onclick="selecionarMapa('FRACTURE')">
+                <img src="assets_valorant_maps/fracture.png" alt="Fracture">
+
             </div>
             <div class="card-mapa" onclick="selecionarMapa('HAVEN')">
-                <img src="assets_valorant_maps/haven.jpg" alt="Haven">
-                <span>HAVEN</span>
+                <img src="assets_valorant_maps/haven.png" alt="Haven">
+
             </div>
-            <div class="card-mapa" onclick="selecionarMapa('Icebox')">
-                <img src="assets_valorant_maps/icebox.jpg" alt="Icebox">
-                <span>ICEBOX</span>
+            <div class="card-mapa" onclick="selecionarMapa('ICEBOX')">
+                <img src="assets_valorant_maps/icebox.png" alt="Icebox">
+
             </div>
-            <div class="card-mapa" onclick="selecionarMapa('Pearl')">
-                <img src="assets_valorant_maps/pearl.jpg" alt="Pearl">
-                <span>PEARL</span>
+            <div class="card-mapa" onclick="selecionarMapa('PEARL')">
+                <img src="assets_valorant_maps/pearl.png" alt="Pearl">
+
             </div>
-            <div class="card-mapa" onclick="selecionarMapa('Split')">
-                <img src="assets_valorant_maps/split.jpg" alt="Split">
-                <span>SPLIT</span>
+            <div class="card-mapa" onclick="selecionarMapa('SPLIT')">
+                <img src="assets_valorant_maps/split.png" alt="Split">
+
             </div>
-            <div class="card-mapa" onclick="selecionarMapa('Sunset')">
-                <img src="assets_valorant_maps/sunset.jpg" alt="Sunset">
-                <span>SUNSET</span>
+            <div class="card-mapa" onclick="selecionarMapa('SUNSET')">
+                <img src="assets_valorant_maps/sunset.png" alt="Sunset">
             </div>
         </div>
     </div>
 
-    <div id="tela-pixels" style="display: none;">
+
+    <div id="tela-lado" style="display: none;">
+    <button class="btn-voltar" onclick="voltarParaMapas()">⬅ Voltar para Mapas</button>
+    <h1>SELECIONE O LADO</h1>
+    
+    <div class="container-lados">
+        <div class="card-lado ataque" onclick="selecionarLado('ataque')">
+            <div class="lado-icon">⚔️</div>
+            <span>ATAQUE</span>
+        </div>
+
+        <div class="card-lado defesa" onclick="selecionarLado('defesa')">
+            <div class="lado-icon">🛡️</div>
+            <span>DEFESA</span>
+        </div>
+    </div>
+</div>
+
+
+    <div id="filtro-pixels" style="display: none;">
         <button class="btn-voltar" onclick="voltar()">⬅ Voltar</button>
-        <h2 id="titulo-mapa" style="text-align: center; color: #00ff88;"></h2>
-        
+        <h2 id="titulo-mapa" style="text-align: center; color: #ffffff;"></h2>
+
         <div class="filtros">
             <button onclick="filtrar('veneno')">Veneno</button>
             <button onclick="filtrar('parede')">Paredes</button>

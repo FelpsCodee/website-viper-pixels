@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
 body {
     background-color: #0f1923;
     color: #ece8e1;
@@ -6,23 +9,18 @@ body {
     padding: 20px;
 }
 
-
 h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-
-.filtros {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    justify-content: center;
-}
-
+/* Botões Gerais (Filtros e Voltar) */
 button {
-    background: transparent;
+    background: none;
+    color: #00ff88;
     border: 1px solid #00ff88;
     padding: 10px 20px;
     cursor: pointer;
@@ -32,34 +30,22 @@ button {
 }
 
 button:hover {
-    background: #00ff88;
-    color: #0f1923;
+    background: #323b37;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2); 
 }
 
-#lista-pixels {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+.btn-voltar {
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
-
-.card-pixel {
-    background: #1f2326;
-    border-bottom: 3px solid #00ff88;
-    padding: 15px;
-    border-radius: 4px;
-    font-family:  Andale Mono, monospace;
-}
-
-video {
-    width: 100%;
-    border-radius: 4px;
-    margin-top: 10px;
-}
-
+/* ==========================================================================
+   2. TELA: ESCOLHA DE MAPA (GRID PRINCIPAL)
+   ========================================================================== */
 .grid-mapas {
     display: grid;
-   
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px; 
     padding: 40px;
@@ -71,14 +57,13 @@ video {
 .card-mapa {
     width: 100%;
     max-width: 300px;
-    background-color: #1f2326;
     border: 2px solid #333;
     cursor: pointer;
     transition: 0.3s;
-    display: flex;
-    flex-direction: column; 
+    overflow: hidden;
     position: relative; 
 }
+
 .card-mapa img {
     width: 100%;
     height: 400px; 
@@ -86,17 +71,149 @@ video {
     display: block;
 }
 
-.card-mapa span {
-    background-color: #111;
-    color: #00ff88; 
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-top: 1px solid #333;
+.card-mapa:hover {
+    transform: translateY(-15px); 
+    border-color: #00ff88;
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2); 
 }
 
-.card-mapa:hover {
-    transform: translateY(-20px); 
-    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2); 
+/* ==========================================================================
+   3. TELA: ESCOLHA DE LADO (CARDS ATAQUE/DEFESA)
+   ========================================================================== */
+#tela-lado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; 
+}
+
+.container-lados {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.card-lado {
+    width: 250px;
+    height: 350px;
+    background: #1f2326;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 4px;
+}
+
+.lado-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    filter: grayscale(1);
+    transition: 0.4s;
+}
+
+.card-lado span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #888;
+    transition: 0.4s;
+}
+
+/* Hover Ataque */
+.card-lado.ataque:hover {
+    border-color: #ff4655;
+    background: linear-gradient(180deg, #1f2326 0%, rgba(255, 70, 85, 0.1) 100%);
+    box-shadow: 0 0 30px rgba(255, 70, 85, 0.3);
+    transform: scale(1.05);
+}
+.card-lado.ataque:hover .lado-icon { filter: grayscale(0); transform: translateY(-10px); }
+.card-lado.ataque:hover span { color: #ff4655; }
+
+/* Hover Defesa */
+.card-lado.defesa:hover {
+    border-color: #00ccff;
+    background: linear-gradient(180deg, #1f2326 0%, rgba(0, 204, 255, 0.1) 100%);
+    box-shadow: 0 0 30px rgba(0, 204, 255, 0.3);
+    transform: scale(1.05);
+}
+.card-lado.defesa:hover .lado-icon { filter: grayscale(0); transform: translateY(-10px); }
+.card-lado.defesa:hover span { color: #00ccff; }
+
+/* ==========================================================================
+   4. TELA: FILTRO DE PIXELS (VIDEOS)
+   ========================================================================== */
+#filtro-pixels { padding-top: 10px; }
+
+#titulo-mapa {
+    margin-top: 0;
+    margin-bottom: 20px; 
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+#lista-pixels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 25px;
+}
+
+.card-pixel {
+    background: linear-gradient(145deg, #1f2326, #16191b); 
+    border-left: 4px solid #017740; 
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card-pixel:hover {
+    transform: translateY(-8px); 
+    border-left-color: #00ff88; 
+    box-shadow: 0 12px 24px rgba(0, 255, 136, 0.15);
+}
+
+.card-pixel h3 {
+    margin: 0 auto 15px auto;
+    font-size: 1.1rem;
+    height: 3em; 
+    text-align: center;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.card-pixel p {
+    color: #00ff88;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05); 
 }

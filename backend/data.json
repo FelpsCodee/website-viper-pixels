@@ -22,7 +22,45 @@
     "lado": "Defesa",
     "categoria": "smoke",
     "local": "Entrada B One-Way",
-    "video": "/uploads/abyss/ataque/smoke-oneway-B.mp4"
+    "video": "/uploads/abyss/defesa/smoke-oneway-B.mp4"
+  },
+
+
+  {
+    "id": 4,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno",
+    "local": "Veneno Gerador corredor lampada A",
+    "video": "/uploads/ascent/ataque/ascent-corredor-default-A.mp4"
+  },
+
+  {
+    "id": 5,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "ult",
+    "local": "Ult + veneno pós plant",
+    "video": "/uploads/ascent/ataque/combo-ult-A.mp4"
+  },
+
+   {
+    "id": 6,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno",
+    "local": "Double Veneno gerador + default A",
+    "video": "/uploads/ascent/ataque/double-veneno-gerador-e-default-A.mp4"
+  },
+
+   {
+    "id": 7,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno",
+    "local": "Veneno Bike gerador A",
+    "video": "/uploads/ascent/ataque/ascent-gerador-default-A.mp4"
   }
 
+  
 ]
