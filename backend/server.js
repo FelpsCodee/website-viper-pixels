@@ -41,6 +41,11 @@ app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/admin.html'));
 });
 
+
+app.get('/favicon.png', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/favicon.png'));
+});
+
 app.listen(3000, () => {
-    console.log('Servidor rodando em http://localhost:3000');
+    console.log('Servidor rodando em: (http://localhost:3000)');
 });

@@ -60,7 +60,105 @@
     "categoria": "veneno",
     "local": "Veneno Bike gerador A",
     "video": "/uploads/ascent/ataque/ascent-gerador-default-A.mp4"
-  }
+  },
 
+  {
+    "id": 8,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno",
+    "local": "2 Venenos - Meio B default",
+    "video": "/uploads/ascent/ataque/2veneno-default-B-meio.mp4"
+  },
+
+  {
+    "id": 9,
+    "mapa": "Ascent",
+    "lado": "Defesa",
+    "categoria": "parede",
+    "local": "Parede que cobre entrada A, varanda e meio",
+    "video": "/uploads/ascent/ataque/parede-A-varanda-meio.mp4"
+  },
+
+  {
+    "id": 10,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "parede",
+    "local": "Parede Entry A padrão",
+    "video": "/uploads/ascent/ataque/parede-default-A.mp4"
+  },
+
+  {
+    "id": 11,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "parede",
+    "local": "Parede Entry B padrão",
+    "video": "/uploads/ascent/ataque/parede-entry-B.mp4"
+  },
+
+  {
+    "id": 12,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "smoke",
+    "local": "Smoke default entry A",
+    "video": "/uploads/ascent/ataque/smoke-Default-A.mp4"
+  },
+
+  {
+    "id": 13,
+    "mapa": "Ascent",
+    "lado": "Defesa",
+    "categoria": "smoke",
+    "local": "Smoke OneWay entrada A",
+    "video": "/uploads/ascent/ataque/smoke-oneway-entrada-A.mp4"
+  },
+
+  {
+    "id": 14,
+    "mapa": "Ascent",
+    "lado": "Defesa",
+    "categoria": "smoke",
+    "local": "Smoke OneWay Mercado",
+    "video": "/uploads/ascent/ataque/smoke-oneway-mercado.mp4"
+  },
+
+  {
+    "id": 15,
+    "mapa": "Ascent",
+    "lado": "Defesa",
+    "categoria": "smoke",
+    "local": "Smoke OneWay Varanda A",
+    "video": "/uploads/ascent/ataque/smoke-oneway-varanda.mp4"
+  },
+  
+  {
+    "id": 16,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno",
+    "local": "veneno default A da base",
+    "video": "/uploads/ascent/ataque/veneno-default-A-da-base.mp4"
+  },
+
+  {
+    "id": 17,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno",
+    "local": "veneno default A da base",
+    "video": "/uploads/ascent/ataque/veneno-default-A-floresta-varanda.mp4"
+  },
+
+  {
+    "id": 18,
+    "mapa": "Ascent",
+    "lado": "Ataque",
+    "categoria": "veneno",
+    "local": "veneno default A da base",
+    "video": "/uploads/ascent/ataque/veneno-default-A-floresta-varanda.mp4"
+  }
   
 ]

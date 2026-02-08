@@ -27,7 +27,6 @@ function voltar(){
     document.getElementById('filtro-pixels').style.display = 'none';
     document.getElementById('tela-lado').style.display = 'block';
 
-    buscarPixels(console.log("Servidor respondeu com estes dados:", pixels));
 }
 ;async function buscarPixels(categoria = '') {
 
@@ -49,6 +48,23 @@ function voltar(){
             </video>
         `;
         container.appendChild(div);
+    });
+}
+
+
+function executarBusca(){
+    const userinput = document.getElementById('inputbusca').value.toLowerCase();
+
+    const allcards = document.querySelectorAll('.card-pixel');
+
+    allcards.forEach(card => {
+
+        const tituloCard = card.querySelector('h3').innerText.toLowerCase();
+        if (tituloCard.includes(userinput)) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
     });
 }
 function voltarParaMapas() {

@@ -164,6 +164,17 @@ button:hover {
     justify-content: center;
 }
 
+#inputbusca {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(145deg, #1f2326, #16191b);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
 #lista-pixels {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
